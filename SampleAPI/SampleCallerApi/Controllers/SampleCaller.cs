@@ -20,8 +20,9 @@ namespace SampleCallerApi.Controllers
         public async Task<IActionResult> Get()
         {
             var httpClient = new HttpClient();
-            var result = await httpClient.GetAsync("https://sample.api:443");
-            return Ok(result);
+            var result = await httpClient.GetAsync("https://sample.st.dev:443/test");
+            var content = await result.Content.ReadAsStringAsync();            
+            return Ok(content);
         }
     }
 }

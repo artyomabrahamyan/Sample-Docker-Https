@@ -7,7 +7,9 @@ services:
       context: .
       dockerfile: SampleAPI/Dockerfile
     networks:
-      - test-network
+      test-network:
+        aliases:
+          - sample.st.dev
     ports:
       - "8000:443"
     environment:
