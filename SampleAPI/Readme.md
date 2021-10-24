@@ -8,7 +8,6 @@
 ### Generate Certificate
 - Go to the SampleAPI/ssl folder.
 - Run make-cert.bat.
-- localhost.crt should be added to SampleAPI root folder.
 - Go to Windows Certificate Manager and import the localhost.crt under Trusted Root Certification Authorithy.
 
 ## Mac OS
@@ -17,7 +16,6 @@
 - Go to the SampleAPI/ssl folder.
 - sudo chmod 755 make-cert.sh
 - Run make-cert.sh. (NOTE: trusting certificate will require super user privileges)
-- localhost.crt should be added to SampleAPI root folder.
 
 ## Run
 - docker-compose up in the root directory
