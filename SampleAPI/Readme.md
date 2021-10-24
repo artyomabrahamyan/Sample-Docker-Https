@@ -1,20 +1,24 @@
 # Setup
-## Windows
 
 ### Prerequisites
 - Have openssl installed and addded to PATH. Example version: OpenSSL 1.1.1k  25 Mar 2021.
 
-### Step 1 (Generate Certificate)
+## Windows
+
+### Generate Certificate
 - Go to the SampleAPI/ssl folder.
 - Run make-cert.bat.
--  localhost.crt should be added to SampleAPI root folder.
+- localhost.crt should be added to SampleAPI root folder.
 - Go to Windows Certificate Manager and import the localhost.crt under Trusted Root Certification Authorithy.
 
-### Step 2 (Run)
+## Mac OS
+
+### Generate Certificate
+- Go to the SampleAPI/ssl folder.
+- sudo chmod 755 make-cert.sh
+- Run make-cert.sh. (NOTE: trusting certificate will require super user privileges)
+- localhost.crt should be added to SampleAPI root folder.
+
+## Run
 - docker-compose up in the root directory
-- go to https://localhost:8001/swagger
-
-Expected Result: The request to the other service should be made.
-Actual Result: Certificate error.
-
-Similar example: https://github.com/WireMock-Net/WireMock.Net/issues/517
+- go to https://localhost:8001/swagger and make the request.
