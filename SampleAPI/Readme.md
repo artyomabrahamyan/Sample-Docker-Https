@@ -6,9 +6,7 @@
 
 ### Step 1 (Generate Certificate)
 - Go to the SampleAPI/ssl folder.
-- Run make-cert.bat.
--  localhost.crt should be added to SampleAPI root folder.
-- Go to Windows Certificate Manager and import the localhost.crt under Trusted Root Certification Authorithy.
+- Run make-cert.ps1 in Administrator PowerShell.
 
 ### Step 2 (Run)
 - docker-compose up in the root directory
